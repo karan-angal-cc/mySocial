@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		9E6243D61EBC5C8F00A80475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6243DC1EBC5E8000A80475 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E6243E11EBDEA2600A80475 /* fancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyView.swift; sourceTree = "<group>"; };
+		9E7A52001EC5D7F300EF1A5E /* mySocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mySocial.entitlements; sourceTree = "<group>"; };
 		9ECFF1821EC2E46B008AD42B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9ECFF1841EC3035F008AD42B /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		9ECFF1861EC30AC1008AD42B /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		9E6243C91EBC5C8F00A80475 /* mySocial */ = {
 			isa = PBXGroup;
 			children = (
+				9E7A52001EC5D7F300EF1A5E /* mySocial.entitlements */,
 				9ECFF1811EC2E441008AD42B /* Util */,
 				9E6243DE1EBC61B800A80475 /* Model */,
 				9E6243DF1EBC61C000A80475 /* View */,
@@ -175,11 +177,16 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VM2MAV7TB4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 9E6243C21EBC5C8F00A80475 /* Build configuration list for PBXProject "mySocial" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -393,6 +400,7 @@
 			baseConfigurationReference = C51C355CC64C252E9727483C /* Pods-mySocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mySocial/mySocial.entitlements;
 				DEVELOPMENT_TEAM = VM2MAV7TB4;
 				INFOPLIST_FILE = mySocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -407,6 +415,7 @@
 			baseConfigurationReference = DD3D7120CAD16CEB9A6505D2 /* Pods-mySocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mySocial/mySocial.entitlements;
 				DEVELOPMENT_TEAM = VM2MAV7TB4;
 				INFOPLIST_FILE = mySocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
